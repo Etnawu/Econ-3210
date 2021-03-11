@@ -1,0 +1,22 @@
+clear
+
+cd "C:\Users\azure\OneDrive\Desktop\school stuff\econ 3210\Assignment 3 Materials -20201117"
+use WAGE2
+
+*Question a*
+reg lwage educ IQ
+
+*Question b 1*
+reg educ IQ
+
+predict educ_res, res
+
+*Question b 2*
+reg lwage educ_res
+
+*Question c*
+reg lwage IQ 
+
+predict lnwage_res, res
+
+reg lnwage_res educ_res
